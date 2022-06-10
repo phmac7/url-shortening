@@ -1,0 +1,9 @@
+@use '/public/styles/variables' as *;
+
+.statistics{
+
+        &Container{
+            padding: 0 25px 5rem;
+            background-color: rgba(#000, 0.1);
+        }
+}

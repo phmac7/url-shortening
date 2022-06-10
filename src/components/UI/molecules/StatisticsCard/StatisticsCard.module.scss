@@ -1,0 +1,43 @@
+@use '/public/styles/variables' as *;
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #fff;
+    margin-bottom: 10rem;
+    padding: 6rem 3.8rem;
+    text-align: center;
+    position: relative;
+    border-radius: 8px;
+
+    &__img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+
+        &Container{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            padding: 4.3rem;
+            border-radius: 50%;
+            background-color: $dark-violet;
+        }
+    }
+
+    &:not(:first-of-type):before{
+        content: '';
+        width: 8px;
+        height: 10rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        background-color: $cyan;
+    }
+}
