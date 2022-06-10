@@ -1,6 +1,5 @@
 import React from 'react'
-import { ShorteningForm } from '../../UI/molecules'
-import { Header, Headline } from '../../UI/organisms'
+import { Header, Headline, ShortenSection } from '../../UI/organisms'
 import styles from './Home.module.scss'
 
 function Home() {
@@ -8,7 +7,7 @@ function Home() {
         <div className={styles.container}>
             <Header />
             <Headline />
-            <ShorteningForm />
+            <ShortenSection/>
         </div>
     )
 }
