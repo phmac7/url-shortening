@@ -1,0 +1,7 @@
+export { default as Logo } from './Svg/Logo/Logo'
+export { default as Twitter } from './Svg/Twitter/Twitter'
+export { default as Instagram } from './Svg/Instagram/Instagram'
+export { default as Pinterest } from './Svg/Pinterest/Pinterest'
+export { default as Facebook } from './Svg/Facebook/Facebook'
+export { default as Hamburguer } from './Hamburguer/Hamburguer'
+export { default as Button } from './Button/Button'

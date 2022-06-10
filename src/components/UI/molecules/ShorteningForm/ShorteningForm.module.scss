@@ -1,0 +1,25 @@
+@use '/public/styles/variables' as *;
+
+.form {
+    padding: 0 25px;
+    height: 18rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-image: url('/public/assets/bg-shorten-mobile.svg');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-color: $very-dark-blue;
+
+    &__input {
+        padding: 1.2rem 1.5rem;
+        font-size: 1.6rem;
+        font-family: $primary-font;
+        border-radius: 8px;
+
+        &::placeholder {
+            color: $gray;
+        }
+    }
+}

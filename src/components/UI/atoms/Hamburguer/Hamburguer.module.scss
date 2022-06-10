@@ -1,0 +1,25 @@
+.hamburguer {
+
+    &__button {
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        border: none;
+        cursor: pointer;
+        padding: 1rem;
+    }
+
+    &__icon {
+
+        &--up,
+        &--middle,
+        &--bottom {
+            display: block;
+            background-color: #9d9ca4;
+            width: 24px;
+            height: 3px;
+        }
+    }
+
+}

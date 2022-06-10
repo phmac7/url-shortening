@@ -1,0 +1,29 @@
+.headline {
+
+    margin-bottom: 8rem;
+
+    &Container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        width: 140%;
+
+
+        &Container {
+            margin-bottom: 2.5rem;
+            overflow: hidden;
+            padding-left: 25px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 4rem;
+        align-items: center;
+        padding: 0 25px;
+    }
+}

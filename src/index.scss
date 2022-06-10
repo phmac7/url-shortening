@@ -1,3 +1,5 @@
+@use '/public/styles/variables' as *;
+
 *,
 *:after,
 *:before {
@@ -12,4 +14,6 @@ html {
 
 body {
     box-sizing: border-box;
+    font-size: 1.8rem;
+    font-family: $primary-font;
 }

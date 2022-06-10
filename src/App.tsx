@@ -1,6 +1,7 @@
+import Home from './components/Pages/Home'
 function App() {
     return (
-        <h1>hello world</h1>
+        <Home />
     )
 }
 
