@@ -1,5 +1,7 @@
 import React from "react";
+import { BoostLink } from "../../UI/molecules";
 import {
+  Footer,
   Header,
   Headline,
   ShortenSection,
@@ -14,6 +16,8 @@ function Home() {
       <Headline />
       <ShortenSection />
       <Statistics />
+      <BoostLink />
+      <Footer />
     </div>
   );
 }
