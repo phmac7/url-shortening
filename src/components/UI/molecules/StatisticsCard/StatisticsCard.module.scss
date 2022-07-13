@@ -5,17 +5,27 @@
     flex-direction: column;
     gap: 2rem;
     background-color: #fff;
-    margin-bottom: 10rem;
     padding: 6rem 2.3rem;
     text-align: center;
     position: relative;
     border-radius: 8px;
+    
+
+    @media only screen and (min-width: 1024px) {
+        text-align: start;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
 
     &__img{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
+
+        @media only screen and (min-width: 1024px) {
+            text-align: start;
+        }
         
 
         &Container{
@@ -27,6 +37,10 @@
             padding: 4.3rem;
             border-radius: 50%;
             background-color: $dark-violet;
+
+            @media only screen and (min-width: 1024px) {
+                left: 20%;
+            }
         }
     }
 
@@ -39,5 +53,24 @@
         left: 50%;
         transform: translate(-50%, -100%);
         background-color: $cyan;
+
+        @media only screen and (min-width: 1024px) {
+            width: 3rem;
+            height: 8px;
+            top: 50%;
+            left: -1.5rem;
+            transform: translate(-50%, 0);
+        }
+    }
+
+
+    @media only screen and (min-width: 1024px){
+        &:nth-child(2){
+            margin-top: 5rem;
+        }
+        &:nth-child(3){
+            margin-top: 10rem;
+        }
+
     }
 }

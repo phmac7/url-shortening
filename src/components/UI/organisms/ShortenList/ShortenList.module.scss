@@ -1,4 +1,8 @@
 .shortenList{
     list-style: none;
     margin: 3rem 0 0;
+    max-width: 1024px;
+    @media only screen and (min-width: 1024px) {
+        margin: 3rem auto 0;
+    }
 }

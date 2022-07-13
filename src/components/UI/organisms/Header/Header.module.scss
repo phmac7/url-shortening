@@ -9,4 +9,9 @@
     left: 0;
     background-color: #fff;
     z-index: 50;
+    
+
+    @media only screen and (min-width: 1024px){
+        padding: 3.5rem 5.5rem;
+    }
 }

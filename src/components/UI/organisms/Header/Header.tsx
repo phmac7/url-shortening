@@ -1,14 +1,22 @@
-import React from 'react'
-import { Hamburguer, Logo } from '../../atoms'
-import styles from './Header.module.scss'
+import React, { useState } from "react";
+import { Hamburguer, Logo } from "../../atoms";
+import { Navigation } from "../../molecules";
+import styles from "./Header.module.scss";
 
 function Header() {
-    return (
-        <header className={styles.header}>
-            <Logo />
-            <Hamburguer />
-        </header>
-    )
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onClickHandler = (): void => {
+    setIsOpen((prev) => !prev);
+  };
+
+  return (
+    <header className={styles.header}>
+      <Logo />
+      <Navigation isOpen={isOpen} />
+      <Hamburguer onClickHandler={onClickHandler} />
+    </header>
+  );
 }
 
-export default Header
+export default Header;
