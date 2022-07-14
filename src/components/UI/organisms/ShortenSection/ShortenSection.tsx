@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { ShorteningForm } from "../../molecules";
 import ShortenList from "../ShortenList/ShortenList";
 import styles from "./ShortenSection.module.scss";
 
 function ShortenSection() {
+  const [listofLinks, setListofLinks] = useState<string[]>([]);
+
   return (
     <section className={styles.ShortenContainer}>
-      <ShorteningForm />
-      <ShortenList />
+      <ShorteningForm setListofLinks={setListofLinks} />
+      <ShortenList listofLinks={listofLinks} />
     </section>
   );
 }

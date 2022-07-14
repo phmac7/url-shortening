@@ -1,11 +1,24 @@
 import React from "react";
 import { ShortenCard } from "../../molecules";
 import styles from "./ShortenList.module.scss";
+import { v4 as uuidv4 } from "uuid";
 
-function ShortenList() {
+interface Props {
+  listofLinks: string[];
+}
+
+function ShortenList({ listofLinks }: Props) {
+  if (listofLinks === undefined) {
+    return <ul className={styles.shortenList}></ul>;
+  }
+
   return (
     <ul className={styles.shortenList}>
-      <ShortenCard link={"test"} shortenedLink={"teste"} />
+      {listofLinks.map((link) => (
+        <div key={uuidv4()}>
+          <ShortenCard link={`test`} shortenedLink={`${link}`} />
+        </div>
+      ))}
     </ul>
   );
 }
