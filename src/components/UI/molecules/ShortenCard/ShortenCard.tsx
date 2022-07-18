@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../atoms";
 import styles from "./ShortenCard.module.scss";
 
@@ -8,13 +8,23 @@ interface Props {
 }
 
 function ShortenCard({ link, shortenedLink }: Props) {
+  const [copied, setCopied] = useState<boolean>(false);
+
+  const onClick = () => {
+    navigator.clipboard.writeText(shortenedLink);
+    setCopied(true);
+  };
+
   return (
     <div className={styles.shorten__item}>
       <span className={styles.shorten__link}>{link}</span>
-      <a href={`${shortenedLink}`} className={styles.shorten__shortenedlink}>
+      <span
+        onClick={() => navigator.clipboard.writeText(shortenedLink)}
+        className={styles.shorten__shortenedlink}
+      >
         {shortenedLink}
-      </a>
-      <Button text={"Copy!"} />
+      </span>
+      <Button text={copied ? "Copied!" : "Copy!"} onClick={onClick} />
     </div>
   );
 }

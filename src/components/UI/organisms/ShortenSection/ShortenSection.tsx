@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ShorteningForm } from "../../molecules";
 import ShortenList from "../ShortenList/ShortenList";
 import styles from "./ShortenSection.module.scss";

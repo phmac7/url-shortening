@@ -1,31 +1,40 @@
-@use '/public/styles/variables' as *;
+@use "/public/styles/variables" as *;
 
 .form {
-    padding: 0 25px;
-    height: 18rem;
-    gap: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    background-image: url('/assets/bg-shorten-mobile.svg');
-    background-repeat: no-repeat;
-    background-position-x: 100%;
-    background-color: $very-dark-blue;
+  padding: 10px 25px;
+  height: 18rem;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-image: url("/assets/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-color: $very-dark-blue;
+  border-radius: 8px;
+
+  &__input {
+    padding: 1.2rem 1.5rem;
+    font-size: 1.6rem;
+    font-family: $primary-font;
     border-radius: 8px;
+    outline-color: green;
 
-    &__input {
-        padding: 1.2rem 1.5rem;
-        font-size: 1.6rem;
-        font-family: $primary-font;
-        border-radius: 8px;
-
-        &::placeholder {
-            color: $gray;
-        }
+    &--error {
+      outline-color: red;
     }
 
-    @media only screen and (min-width: 1024px) {
-        max-width: 1024px;
-        margin: 0 auto;
+    &::placeholder {
+      color: $gray;
     }
+  }
+
+  &__errorText {
+    color: white;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
 }
