@@ -19,6 +19,9 @@
     font-family: $primary-font;
     border-radius: 8px;
     outline-color: green;
+    @media only screen and (min-width: 1024px) {
+      flex: 1;
+    }
 
     &--error {
       outline-color: red;
@@ -34,7 +37,11 @@
   }
 
   @media only screen and (min-width: 1024px) {
+    background-image: url("/assets/bg-shorten-desktop.svg");
     max-width: 1024px;
+    height: 10rem;
     margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
   }
 }

@@ -1,6 +1,13 @@
-@use '/public/styles/variables' as *;
+@use "/public/styles/variables" as *;
 
-.ShortenContainer{
-    padding: 0 25px 10rem;
-    background-image:  linear-gradient(to bottom, #fff 0% 90px, rgba(#000000, .1) 90px);
+.ShortenContainer {
+  padding: 0 25px 10rem;
+  background-image: linear-gradient(
+    to bottom,
+    #fff 0% 90px,
+    rgba(#000000, 0.1) 90px
+  );
+  @media only screen and (min-width: 1024px) {
+    padding: 35px 25px 10rem;
+  }
 }

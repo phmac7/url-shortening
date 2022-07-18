@@ -39,16 +39,16 @@ function Footer() {
         ))}
       </div>
       <div className={styles.footer__sociais}>
-        <a className={styles["footer__sociais--link"]} href="#">
+        <a className={styles["footer__sociais--link"]} href="#" role="icon">
           <Facebook />
         </a>
-        <a className={styles["footer__sociais--link"]} href="#">
+        <a className={styles["footer__sociais--link"]} href="#" role="icon">
           <Twitter />
         </a>
-        <a className={styles["footer__sociais--link"]} href="#">
+        <a className={styles["footer__sociais--link"]} href="#" role="icon">
           <Pinterest />
         </a>
-        <a className={styles["footer__sociais--link"]} href="#">
+        <a className={styles["footer__sociais--link"]} href="#" role="icon">
           <Instagram />
         </a>
       </div>
