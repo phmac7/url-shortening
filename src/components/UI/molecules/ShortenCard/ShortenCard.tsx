@@ -9,13 +9,13 @@ interface Props {
 
 function ShortenCard({ link, shortenedLink }: Props) {
   return (
-    <li className={styles.shorten__item}>
+    <div className={styles.shorten__item}>
       <span className={styles.shorten__link}>{link}</span>
       <a href={`${shortenedLink}`} className={styles.shorten__shortenedlink}>
         {shortenedLink}
       </a>
       <Button text={"Copy!"} />
-    </li>
+    </div>
   );
 }
 

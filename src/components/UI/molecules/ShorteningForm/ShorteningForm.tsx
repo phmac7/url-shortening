@@ -4,7 +4,14 @@ import styles from "./ShorteningForm.module.scss";
 import { getShortenLink } from "../../../../services/apiConfig";
 
 interface Props {
-  setListofLinks: React.Dispatch<React.SetStateAction<string[]>>;
+  setListofLinks: React.Dispatch<
+    React.SetStateAction<
+      {
+        linktoshort: string;
+        shortenedLink: string;
+      }[]
+    >
+  >;
 }
 
 function ShorteningForm({ setListofLinks }: Props) {
@@ -20,9 +27,12 @@ function ShorteningForm({ setListofLinks }: Props) {
     setLoading(true);
     let helper: string;
     helper = await getShortenLink(input);
+    setListofLinks((prev) => [
+      { linktoshort: input, shortenedLink: helper },
+      ...prev,
+    ]);
     setInput("");
     setLoading(false);
-    setListofLinks((prev) => [...prev, helper]);
   };
 
   return (
@@ -34,8 +44,7 @@ function ShorteningForm({ setListofLinks }: Props) {
         onChange={onChangeHandler}
         placeholder="Shorten a link here..."
       />
-      <Button text={"Shorten it!"} />
-      {loading ? <span>loading...</span> : null}
+      <Button text={"Shorten it!"} change={true} loading={loading} />
     </form>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Facebook, Instagram, Logo, Pinterest, Twitter } from "../../atoms";
 import styles from "./Footer.module.scss";
+import { v4 as uuidv4 } from "uuid";
 
 function Footer() {
   const footerLists = [
@@ -24,20 +25,18 @@ function Footer() {
         <Logo />
       </div>
       <div className={styles.footer__lists}>
-        {footerLists.map((list) => {
-          return (
-            <ul className={styles.footer__list}>
-              <li className={styles["footer__item--title"]}>{list.title}</li>
-              {list.Links.map((link) => (
-                <li className={styles["footer__item"]}>
-                  <a href="#" className={styles["footer__item--link"]}>
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          );
-        })}
+        {footerLists.map((list, index) => (
+          <ul key={index} className={styles.footer__list}>
+            <li className={styles["footer__item--title"]}>{list.title}</li>
+            {list.Links.map((link, index) => (
+              <li key={index} className={styles["footer__item"]}>
+                <a href="#" className={styles["footer__item--link"]}>
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ))}
       </div>
       <div className={styles.footer__sociais}>
         <a className={styles["footer__sociais--link"]} href="#">

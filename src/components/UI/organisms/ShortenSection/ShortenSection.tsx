@@ -4,7 +4,9 @@ import ShortenList from "../ShortenList/ShortenList";
 import styles from "./ShortenSection.module.scss";
 
 function ShortenSection() {
-  const [listofLinks, setListofLinks] = useState<string[]>([]);
+  const [listofLinks, setListofLinks] = useState<
+    { linktoshort: string; shortenedLink: string }[]
+  >([]);
 
   return (
     <section className={styles.ShortenContainer}>

@@ -1,18 +1,20 @@
-@use '/public/styles/variables' as *;
+@use "/public/styles/variables" as *;
 
 .button {
-    background-color: $cyan;
-    border: none;
-    padding: 1.5rem 5rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: $cyan;
+  border: none;
+  padding: 1.5rem 5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
 
+  &--rounded {
+    border-radius: 50px;
+  }
 
-    &--rounded {
-        border-radius: 50px;
-
-    }
+  &__loading {
+    width: 25px;
+  }
 }
