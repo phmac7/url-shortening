@@ -13,11 +13,13 @@ function Home() {
   return (
     <div className={styles.container}>
       <Header />
-      <Headline />
-      <ShortenSection />
-      <Statistics />
-      <BoostLink />
-      <Footer />
+      <main>
+        <Headline />
+        <ShortenSection />
+        <Statistics />
+        <BoostLink />
+        <Footer />
+      </main>
     </div>
   );
 }
