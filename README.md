@@ -30,15 +30,15 @@ Users should be able to:
 <table>
     <tr>
         <td>
-            <img src="/public/shorturl.png" width="580" align="top">
-            <img src="/public/shorturlmobile.png" height="430">
+            <img src="/public/assets/shorturl.png" width="580" align="top">
+            <img src="/public/assets/shorturlmobile.png" height="430">
         </td>
     </tr>
 </table>
 
 ### Links
 
-- Live Site URL: [phmac7-shorturl.netlify.app](phmac7-shorturl.netlify.app)
+- Live Site URL: [https://phmac7-shorturl.netlify.app](https://phmac7-shorturl.netlify.app)
 
 ## My process
 
